@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- ... (resto del código) ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas de la WCA</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos adicionales */
+  </style>
 </head>
 <body>
   <h1>Sum of Ranks WCA</h1>
@@ -23,8 +29,19 @@
     <span id="info-link"></span>
   </div>
   <table id="table">
-    <!-- ... (resto del código) ... -->
+    <thead>
+      <tr>
+        <!-- Encabezados de la tabla -->
+        <th>Posición</th>
+        <th>Competidor</th>
+        <!-- Agrega más columnas según tus datos -->
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Filas de la tabla se generarán dinámicamente -->
+    </tbody>
   </table>
-  <!-- ... (resto del código) ... -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
