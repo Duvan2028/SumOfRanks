@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estadísticas de la WCA</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* Estilos adicionales */
-  </style>
+  <title>Sum of Ranks WCA</title>
 </head>
 <body>
   <h1>Sum of Ranks WCA</h1>
@@ -28,20 +24,26 @@
     <input type="text" id="country-or-continent" placeholder="Escribe un continente o país">
     <span id="info-link"></span>
   </div>
-  <table id="table">
+  <div>
+    <label for="csv-file">Seleccione un archivo CSV:</label>
+    <select id="csv-file">
+      <option value="data/file1.csv">Archivo 1</option>
+      <option value="data/file2.csv">Archivo 2</option>
+      <!-- Agrega más opciones para cada uno de tus archivos CSV -->
+    </select>
+  </div>
+  <table>
     <thead>
-      <tr>
-        <!-- Encabezados de la tabla -->
-        <th>Posición</th>
-        <th>Competidor</th>
-        <!-- Agrega más columnas según tus datos -->
+      <tr id="table-header">
+        <!-- Encabezados de la tabla generados dinámicamente -->
       </tr>
     </thead>
     <tbody id="table-body">
-      <!-- Filas de la tabla se generarán dinámicamente -->
+      <!-- Filas de la tabla generadas dinámicamente -->
     </tbody>
   </table>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.0/papaparse.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
