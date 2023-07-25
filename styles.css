@@ -7,19 +7,57 @@ h1 {
   text-align: center;
 }
 
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Estilos para la tabla */
+.table-container {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: center;
+  text-align: left;
 }
 
-select {
-  font-size: 16px;
-  padding: 5px;
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Estilos para hacer la tabla responsive */
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+  }
+
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
 }
