@@ -23,17 +23,28 @@ label {
 table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid #ccc;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: left;
 }
 
 th {
   background-color: #f2f2f2;
   font-weight: bold;
+}
+
+/* Estilos para los links de continentes y países */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Estilos para hacer la tabla responsive */
@@ -53,11 +64,14 @@ th {
     border-bottom: 1px solid #ddd;
     display: block;
     text-align: right;
+    position: relative;
+    padding-left: 50%;
   }
 
   td:before {
     content: attr(data-label);
-    float: left;
+    position: absolute;
+    left: 0;
     font-weight: bold;
   }
 }
