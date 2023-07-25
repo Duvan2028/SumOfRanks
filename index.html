@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sum of Ranks WCA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Sum of Ranks WCA</h1>
@@ -25,18 +26,15 @@
       <option value="Oceania">Oceania</option>
     </select>
   </div>
-  <table>
-    <thead>
-      <tr id="table-header">
-        <!-- Encabezados de la tabla generados dinámicamente -->
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Filas de la tabla generadas dinámicamente -->
-    </tbody>
-  </table>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr id="table-header"></tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="papaparse.min.js"></script>
   <script src="script.js"></script>
 </body>
