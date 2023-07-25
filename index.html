@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sum of Ranks WCA</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- ... (resto del código) ... -->
 </head>
 <body>
   <h1>Sum of Ranks WCA</h1>
@@ -15,20 +12,19 @@
       <option value="average">Average</option>
     </select>
   </div>
+  <div>
+    <label for="sum-range">Rango del Sum of Ranks:</label>
+    <select id="sum-range">
+      <option value="mundial">Mundial</option>
+      <option value="continental">Continental</option>
+      <option value="pais">Por País</option>
+    </select>
+    <input type="text" id="country-or-continent" placeholder="Escribe un continente o país">
+    <span id="info-link"></span>
+  </div>
   <table id="table">
-    <thead>
-      <tr>
-        <!-- Encabezados de la tabla -->
-        <th>Posición</th>
-        <th>Competidor</th>
-        <!-- Agrega más columnas según tus datos -->
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Filas de la tabla se generarán dinámicamente -->
-    </tbody>
+    <!-- ... (resto del código) ... -->
   </table>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  <script src="script.js"></script>
+  <!-- ... (resto del código) ... -->
 </body>
 </html>
