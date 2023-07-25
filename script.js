@@ -20,23 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Función para mostrar los datos en la tabla
-  function displayTableData(data) {
-    tableBody.innerHTML = '';
-    const sumType = sumTypeSelect.value;
-    const filteredData = data.filter(row => row['Tipo'] === sumType).slice(0, 100);
-
-    filteredData.forEach(row => {
-      const newRow = document.createElement('tr');
-      newRow.innerHTML = `
-        <td>${row['Posicion']}</td>
-        <td>${row['Competidor']}</td>
-        <!-- Agrega más columnas según tus datos -->
-      `;
-      tableBody.appendChild(newRow);
-    });
-  }
-
   // Función para mostrar el enlace de la lista oficial de continentes o países
   function showInfoLink() {
     const sumRange = sumRangeSelect.value;
@@ -51,6 +34,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     infoLink.innerHTML = link;
   }
+
+  // Función para mostrar los datos en la tabla con encabezados y columnas dinámicas
+  function displayTableData(data) {
+    tableBody.innerHTML = '';
+    const sumType = sumTypeSelect.value;
+    const filteredData = data.filter(row => row['Tipo'] === sumType).slice(0, 100);
+
+    // Obtener los encabezados de la tabla a partir de las claves del primer objeto del arreglo
+    const headers = Object.keys(filteredData[0]);
+
+    // Crear los encabezados de la tabla
+    const headerRow = document.createElement('tr');
+    headers.forEach(header => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+    tableBody.appendChild(headerRow);
+
+    // Crear las filas de la tabla con los datos
+    filteredData.forEach(row => {
+      const newRow = document.createElement('tr');
+      headers.forEach(header => {
+        const td = document.createElement('td');
+        td.textContent = row[header];
+        newRow.appendChild(td);
+      });
+      tableBody.appendChild(newRow);
+    });
+  }
+
   // Cargar datos al cargar la página y cuando se cambia el tipo de sum of ranks o rango
   loadCSVData(csvFileURL);
   sumTypeSelect.addEventListener('change', function() {
@@ -65,4 +79,4 @@ document.addEventListener('DOMContentLoaded', function() {
     showInfoLink();
   });
 });
- 
+        
