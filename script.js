@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sumRange === 'continental') {
       link = `<a href="https://www.worldcubeassociation.org/regions/" target="_blank">Lista de Continentes</a>`;
     } else if (sumRange === 'pais') {
-      link = `<a href="https://www.worldcubeassociation.org/countries/" target="_blank">Lista de Países</a>`;
+      link = `<a href="https://www.worldcubeassociation.org/regulations/countries/" target="_blank">Lista de Países</a>`;
     }
 
     infoLink.innerHTML = link;
