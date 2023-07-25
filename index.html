@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabla de Sum of Ranks WCA</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Sum of Ranks WCA</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Tabla de Sum of Ranks WCA</h1>
-
-  <div class="options">
-    <label for="tipo-sumofranks">Tipo de Sum of Ranks:</label>
-    <select id="tipo-sumofranks">
+  <h1>Sum of Ranks WCA</h1>
+  <div>
+    <label for="sum-type">Tipo de Sum of Ranks:</label>
+    <select id="sum-type">
       <option value="single">Single</option>
       <option value="average">Average</option>
     </select>
   </div>
-
-  <div id="tabla-container"></div>
-
-  <script src="js/main.js"></script>
+  <table id="table">
+    <thead>
+      <tr>
+        <!-- Encabezados de la tabla -->
+        <th>Posición</th>
+        <th>Competidor</th>
+        <!-- Agrega más columnas según tus datos -->
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Filas de la tabla se generarán dinámicamente -->
+    </tbody>
+  </table>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
